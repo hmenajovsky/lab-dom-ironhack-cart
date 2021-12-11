@@ -1,8 +1,8 @@
 // ITERATION 1
 
 function updateSubtotal(product) {
-  const price = product.querySelector(".price span").textContent;
-  const quantity = product.querySelector(".quantity input").value;
+  const price = product.querySelector('.price span').textContent;
+  const quantity = product.querySelector('.quantity input').value;
   return price * quantity;  
 }
 
@@ -25,7 +25,7 @@ function calculateAll() {
   } );
 
   // ITERATION 3
-   let total = document.querySelector("#total-value span");
+   let total = document.querySelector('#total-value span');
     total.textContent = sum;
 }
 
@@ -45,12 +45,12 @@ function removeProduct(event) {
 
 function createProduct() {
   let inputName = document.querySelector('.create-product input[type="text"]');
-  let inputPrice = document.querySelector('.create-product input[type="number');
-  //const singleProduct = document.querySelector('.product'); 
+  let inputPrice = document.querySelector('.create-product input[type="number"]');
 
-  const template = document.querySelector("#productrow");
+  const template = document.querySelector('#productrow');
   const tBody = document.querySelector('#cart tbody')
   const clone = document.importNode(template.content, true);
+    //const singleProduct = document.querySelector('.product');
   //const clone = singleProduct.cloneNode([true]); other method but same issue with remove event listening
 
   console.log('clone :>> ', clone);
@@ -68,9 +68,9 @@ window.addEventListener('load', () => {
   calculatePricesBtn.addEventListener('click', calculateAll);
 
   const removeProductsBtn = document.querySelectorAll('.btn-remove');
-  removeProductsBtn.forEach((btn) => btn.addEventListener("click", removeProduct));
+  removeProductsBtn.forEach((btn) => btn.addEventListener('click', removeProduct));
 
 const createProductBtn = document.getElementById('create');
-createProductBtn.addEventListener("click", createProduct);
+createProductBtn.addEventListener('click', createProduct);
 
 })
